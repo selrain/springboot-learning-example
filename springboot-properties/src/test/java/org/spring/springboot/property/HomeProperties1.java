@@ -1,14 +1,16 @@
 package org.spring.springboot.property;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 /**
  * 家乡属性
- *
+ *  PropertySource配置优先级低于应用内application.properties
  * Created by bysocket on 17/04/2017.
  */
 @Component
+@PropertySource(value ="file:src/test/resouorces/application.yml")
 public class HomeProperties1 {
 
     /**
